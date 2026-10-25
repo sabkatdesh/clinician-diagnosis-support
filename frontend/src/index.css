@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  body {
+    @apply bg-slate-50 text-slate-800 antialiased;
+  }
+
+  .dark body {
+    @apply bg-slate-900 text-slate-100;
+  }
+}
+
+@layer components {
+  .input-field {
+    @apply w-full rounded-xl border border-slate-200 px-3.5 py-2.5 text-sm text-slate-800 focus:outline-none focus:ring-2 focus:ring-brand-600 focus:border-transparent placeholder:text-slate-400;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0);
+  }
+}
